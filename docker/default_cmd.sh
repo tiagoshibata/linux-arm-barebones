@@ -13,7 +13,7 @@ if ! cd $SRC/linux ; then
     fail "Mount the linux folder as a volume under $SRC/linux"
 fi
 ./configure.sh
-make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi-
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- -C linux
 
 if ! cd $SRC/initramfs ; then
     fail "Mount a volume with initramfs source files under $SRC/initramfs"
