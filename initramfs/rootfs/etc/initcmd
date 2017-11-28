@@ -1,0 +1,11 @@
+# Early initialization. Will be run sequentially and can depend on each other's
+# completion.
+# Programs and arguments must be separated by single spaces.
+/usr/bin/busybox mkdir -p /proc /sys /dev
+/usr/bin/busybox mount -t proc none /proc
+/usr/bin/busybox mount -t sysfs none /sys
+/usr/bin/busybox mount -t devtmpfs none /dev
+# Blank line separator
+
+# Common user-mode processes. Will be run in parallel
+/usr/bin/busybox sh
