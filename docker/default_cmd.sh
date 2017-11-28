@@ -10,7 +10,7 @@ fail() {
 # However, I'm keeping them separate to reduce output cluttering.
 SRC=/home/student/src
 if ! cd $SRC/linux ; then
-    fail "Mount a linux tree volume under $SRC/linux"
+    fail "Mount the linux folder as a volume under $SRC/linux"
 fi
 ./configure.sh
 make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi-
