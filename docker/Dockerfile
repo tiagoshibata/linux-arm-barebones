@@ -16,7 +16,7 @@ ENV MAKEFLAGS -j4
 RUN useradd -mG sudo student && mkdir -p /etc/sudoers.d && \
     echo '%sudo   ALL=(ALL:ALL) NOPASSWD: ALL' > /etc/sudoers.d/sudo_nopasswd && \
     mkdir -p /home/student/src && \
-    echo "alias gdb=\"arm-none-eabi-gdb -ex 'target remote:1234' /home/student/src/linux/vmlinux\"" >> /home/student/.bashrc
+    echo "alias gdb=\"arm-none-eabi-gdb -ex 'target remote:1234' /home/student/src/linux/linux/vmlinux\"" >> /home/student/.bashrc
 
 COPY ./entrypoint.sh /
 COPY ./default_cmd.sh /
